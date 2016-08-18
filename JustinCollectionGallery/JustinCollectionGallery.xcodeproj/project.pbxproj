@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40D16C51D65694F00EB6766 /* JustinGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40D16C41D65694F00EB6766 /* JustinGalleryView.m */; };
 		E425AA561D64504F002C0028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E425AA551D64504F002C0028 /* main.m */; };
 		E425AA591D64504F002C0028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E425AA581D64504F002C0028 /* AppDelegate.m */; };
 		E425AA5C1D64504F002C0028 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E425AA5B1D64504F002C0028 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E40D16C31D65694F00EB6766 /* JustinGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JustinGalleryView.h; sourceTree = "<group>"; };
+		E40D16C41D65694F00EB6766 /* JustinGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JustinGalleryView.m; sourceTree = "<group>"; };
 		E425AA511D64504F002C0028 /* JustinCollectionGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustinCollectionGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E425AA551D64504F002C0028 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E425AA571D64504F002C0028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				E4B55E9E1D6466B800028B98 /* JustinCollectionViewCell.xib */,
 				E4B55E9F1D6466B800028B98 /* JustinGalleryFlowLayout.h */,
 				E4B55EA01D6466B800028B98 /* JustinGalleryFlowLayout.m */,
+				E40D16C31D65694F00EB6766 /* JustinGalleryView.h */,
+				E40D16C41D65694F00EB6766 /* JustinGalleryView.m */,
 			);
 			path = JustinTransformGallery;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				E4B55EA11D6466B800028B98 /* JustinCollectionViewCell.m in Sources */,
 				E425AA591D64504F002C0028 /* AppDelegate.m in Sources */,
 				E425AA561D64504F002C0028 /* main.m in Sources */,
+				E40D16C51D65694F00EB6766 /* JustinGalleryView.m in Sources */,
 				E4B55EA31D6466B800028B98 /* JustinGalleryFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

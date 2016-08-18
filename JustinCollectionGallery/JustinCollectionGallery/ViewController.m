@@ -7,12 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "JustinGalleryFlowLayout.h"
-#import "JustinCollectionViewCell.h"
+#import "JustinTransformGallery/JustinGalleryView.h"
 
-#define kCollectionViewCellId @"kCollectionViewCellId"
-
-@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ViewController ()
 
 @end
 
@@ -32,31 +29,9 @@
 
 - (void)pxy_setCollectionView {
     
-    JustinGalleryFlowLayout *flowLayout = [[JustinGalleryFlowLayout alloc] init];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
-    collectionView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150);
-    collectionView.center = self.view.center;
-    collectionView.showsHorizontalScrollIndicator = false;
-    collectionView.backgroundColor = [UIColor lightGrayColor];
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
-    [collectionView registerNib:[UINib nibWithNibName:@"JustinCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:kCollectionViewCellId];
-    [self.view addSubview:collectionView];
+    JustinGalleryView *gallery = [[JustinGalleryView alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 150)];
+    [self.view addSubview:gallery];
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    JustinCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCellId forIndexPath:indexPath];
-    cell.imageName = @"1004";
-    return cell;
-}
 
 @end
