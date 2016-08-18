@@ -13,22 +13,26 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H52-eS-CY0" userLabel="ShowImage">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8O-8n-hkg" userLabel="ShowImageButton">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="150" id="MVo-SS-1Tu"/>
-                            <constraint firstAttribute="width" constant="150" id="ohO-fS-RUU"/>
+                            <constraint firstAttribute="width" constant="150" id="8AX-Hk-OHe"/>
+                            <constraint firstAttribute="height" constant="150" id="vBF-Pa-OHk"/>
                         </constraints>
-                    </imageView>
+                        <connections>
+                            <action selector="clickShowImageButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1jR-kW-dBb"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="H52-eS-CY0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="1mi-ia-xKX"/>
-                <constraint firstItem="H52-eS-CY0" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="70A-G4-K2v"/>
+                <constraint firstItem="X8O-8n-hkg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="HYB-qB-cPr"/>
+                <constraint firstItem="X8O-8n-hkg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="eva-UU-pku"/>
             </constraints>
             <connections>
-                <outlet property="imageView" destination="H52-eS-CY0" id="xvV-bg-UhR"/>
+                <outlet property="showImageButton" destination="X8O-8n-hkg" id="ZFr-NJ-VOB"/>
             </connections>
             <point key="canvasLocation" x="274" y="323"/>
         </collectionViewCell>

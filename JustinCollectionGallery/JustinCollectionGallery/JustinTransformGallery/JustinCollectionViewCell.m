@@ -10,7 +10,7 @@
 
 @interface JustinCollectionViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *showImageButton;
 
 @end
 
@@ -22,7 +22,12 @@
 
 - (void)setImageName:(NSString *)imageName {
     _imageName = imageName;
-    self.imageView.image = [UIImage imageNamed:imageName];
+    UIImage *img = [UIImage imageNamed:imageName];
+    [_showImageButton setBackgroundImage:img forState:UIControlStateNormal];
 }
 
+- (IBAction)clickShowImageButton:(id)sender {
+    
+    NSLog(@"did click: %@", _imageName);
+}
 @end
