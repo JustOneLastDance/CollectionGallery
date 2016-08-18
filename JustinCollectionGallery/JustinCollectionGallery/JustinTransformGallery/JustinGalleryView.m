@@ -12,7 +12,7 @@
 
 #define kCollectionViewCellId @"kCollectionViewCellId"
 
-@interface JustinGalleryView ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface JustinGalleryView ()<UICollectionViewDelegate, UICollectionViewDataSource, JustinCollectionViewCellDelegate>
 
 @end
 
@@ -40,9 +40,14 @@
     _array = array;
 }
 
+#pragma mark - other delegate 
+- (void)didClickShowImageButtonWithImageName:(NSString *)imageName {
+    NSLog(@"当前控制器：%@  传过来的值：%@", self, imageName);
+}
+
 #pragma - collectionView delegate & datasource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 100;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -53,6 +58,7 @@
     
     JustinCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCellId forIndexPath:indexPath];
     cell.imageName = _array[indexPath.row];
+    cell.delegate = self;
     
     return cell;
 }

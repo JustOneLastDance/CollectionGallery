@@ -19,6 +19,7 @@
     [super prepareLayout];
     self.itemSize = CGSizeMake(PXY_size, PXY_size);
     self.minimumInteritemSpacing = PXY_Margin;
+    self.minimumLineSpacing = 0;
     CGFloat extraMargin = (PXY_ScreenW - PXY_size) * 0.5;
     self.sectionInset = UIEdgeInsetsMake(0, extraMargin, 0, extraMargin);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;

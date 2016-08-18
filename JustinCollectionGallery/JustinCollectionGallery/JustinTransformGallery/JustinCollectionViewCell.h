@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JustinCollectionViewCellDelegate <NSObject>
+/**
+ *  代理传值
+ *
+ *  @param imageName cell内的图片信息
+ */
+- (void)didClickShowImageButtonWithImageName:(NSString *)imageName;
+
+@end
+
 @interface JustinCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, copy) NSString *imageName;
+
+@property (nonatomic, weak) id<JustinCollectionViewCellDelegate> delegate;
 
 @end
