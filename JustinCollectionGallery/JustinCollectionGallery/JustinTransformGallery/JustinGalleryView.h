@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface JustinGalleryView : UIView
+/**
+ *  显示内容数组
+ */
+@property (nonatomic, strong) NSArray *array;
 
 @end

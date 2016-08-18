@@ -29,7 +29,10 @@
 
 - (void)pxy_setCollectionView {
     
+    NSArray *arr = @[@"1001", @"1002", @"1003", @"1004"];
+    
     JustinGalleryView *gallery = [[JustinGalleryView alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 150)];
+    gallery.array = arr;
     [self.view addSubview:gallery];
 }
 

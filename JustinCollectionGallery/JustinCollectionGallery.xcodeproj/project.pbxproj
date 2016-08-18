@@ -94,13 +94,13 @@
 		E4B55E9B1D6466B800028B98 /* JustinTransformGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E40D16C31D65694F00EB6766 /* JustinGalleryView.h */,
+				E40D16C41D65694F00EB6766 /* JustinGalleryView.m */,
 				E4B55E9C1D6466B800028B98 /* JustinCollectionViewCell.h */,
 				E4B55E9D1D6466B800028B98 /* JustinCollectionViewCell.m */,
 				E4B55E9E1D6466B800028B98 /* JustinCollectionViewCell.xib */,
 				E4B55E9F1D6466B800028B98 /* JustinGalleryFlowLayout.h */,
 				E4B55EA01D6466B800028B98 /* JustinGalleryFlowLayout.m */,
-				E40D16C31D65694F00EB6766 /* JustinGalleryView.h */,
-				E40D16C41D65694F00EB6766 /* JustinGalleryView.m */,
 			);
 			path = JustinTransformGallery;
 			sourceTree = "<group>";

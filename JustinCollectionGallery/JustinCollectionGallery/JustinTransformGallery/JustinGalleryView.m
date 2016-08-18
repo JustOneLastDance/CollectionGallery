@@ -36,19 +36,23 @@
     return self;
 }
 
+- (void)setArray:(NSArray *)array {
+    _array = array;
+}
+
 #pragma - collectionView delegate & datasource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return _array.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     JustinCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCellId forIndexPath:indexPath];
-    cell.imageName = @"1004";
+    cell.imageName = _array[indexPath.row];
     
     return cell;
 }
