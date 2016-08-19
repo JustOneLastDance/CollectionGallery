@@ -11,14 +11,26 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSArray *imageNameArray;
+
 @end
 
 @implementation ViewController
 
+#pragma mark - lazy loading
+- (NSArray *)imageNameArray {
+    if (_imageNameArray == nil) {
+        _imageNameArray = [NSArray array];
+    }
+    return _imageNameArray.mutableCopy;
+}
+
+#pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    _imageNameArray = @[@"1001", @"1002", @"1003", @"1004"];
     [self pxy_setCollectionView];
 }
 
@@ -27,12 +39,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - inner method
 - (void)pxy_setCollectionView {
     
-    NSArray *arr = @[@"1001", @"1002", @"1003", @"1004"];
-    
     JustinGalleryView *gallery = [[JustinGalleryView alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 150)];
-    gallery.array = arr;
+    gallery.array = _imageNameArray;
     [self.view addSubview:gallery];
 }
 
